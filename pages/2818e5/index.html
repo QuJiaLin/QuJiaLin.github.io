@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>01.canvas 基本用法 | 五维星空</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/img/favicon.ico">
+    <script data-ad-client="ca-pub-4796012552897657" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="全栈修炼之路">
+    <meta name="keywords" content="Java全栈博客,个人技术博客,前端,后端,前端开发,后端开发,前端框架,后端框架,web前端,web后端,数据库,前端面试题,后端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown,Java,Spring,SpringBoot,SpringMvc,Docker,MySQL">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.2ceecd60.css" as="style"><link rel="preload" href="/assets/js/app.7a37bc80.js" as="script"><link rel="preload" href="/assets/js/2.fac42ad5.js" as="script"><link rel="preload" href="/assets/js/22.0b1a4bee.js" as="script"><link rel="prefetch" href="/assets/js/10.a1e48ae4.js"><link rel="prefetch" href="/assets/js/11.901b0833.js"><link rel="prefetch" href="/assets/js/12.9355c718.js"><link rel="prefetch" href="/assets/js/13.571e03c1.js"><link rel="prefetch" href="/assets/js/14.2e8346fd.js"><link rel="prefetch" href="/assets/js/15.844ac9bc.js"><link rel="prefetch" href="/assets/js/16.a70e2a45.js"><link rel="prefetch" href="/assets/js/17.1bc8513f.js"><link rel="prefetch" href="/assets/js/18.7fdaeb9d.js"><link rel="prefetch" href="/assets/js/19.e01293e5.js"><link rel="prefetch" href="/assets/js/20.bd4fc039.js"><link rel="prefetch" href="/assets/js/21.071e1f89.js"><link rel="prefetch" href="/assets/js/23.9b8e252c.js"><link rel="prefetch" href="/assets/js/24.421b90ee.js"><link rel="prefetch" href="/assets/js/25.3fd6c639.js"><link rel="prefetch" href="/assets/js/26.229d0f35.js"><link rel="prefetch" href="/assets/js/27.7a714d6d.js"><link rel="prefetch" href="/assets/js/28.aea70d79.js"><link rel="prefetch" href="/assets/js/29.d237c638.js"><link rel="prefetch" href="/assets/js/3.5e24be4e.js"><link rel="prefetch" href="/assets/js/30.d0f3f208.js"><link rel="prefetch" href="/assets/js/31.33fd097a.js"><link rel="prefetch" href="/assets/js/32.92296070.js"><link rel="prefetch" href="/assets/js/33.12089269.js"><link rel="prefetch" href="/assets/js/34.01034d36.js"><link rel="prefetch" href="/assets/js/35.a08de71d.js"><link rel="prefetch" href="/assets/js/36.e94fda4b.js"><link rel="prefetch" href="/assets/js/37.6943fedf.js"><link rel="prefetch" href="/assets/js/38.d57bee44.js"><link rel="prefetch" href="/assets/js/39.ddedd2dc.js"><link rel="prefetch" href="/assets/js/4.6678ed5e.js"><link rel="prefetch" href="/assets/js/40.f14c3770.js"><link rel="prefetch" href="/assets/js/41.230336a4.js"><link rel="prefetch" href="/assets/js/5.7403dcb5.js"><link rel="prefetch" href="/assets/js/6.50f02e13.js"><link rel="prefetch" href="/assets/js/7.eaaa5221.js"><link rel="prefetch" href="/assets/js/8.b0e44506.js"><link rel="prefetch" href="/assets/js/9.f4e9b912.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2ceecd60.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-body-img"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="五维星空" class="logo"> <span class="site-name can-hide">五维星空</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/QuJiaLin/Learning" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/avatar.png"> <div class="blogger-info"><h3>五维星空</h3> <span>全栈修炼之路</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/QuJiaLin/Learning" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/821967/" class="sidebar-link">HTML5基础</a></li><li><a href="/pages/07622f/" class="sidebar-link">axios使用</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Canvas入门教程</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/2818e5/" aria-current="page" class="active sidebar-link">01.canvas 基本用法</a></li><li><a href="/pages/ce3910/" class="sidebar-link">02.canvas 绘制矩形</a></li><li><a href="/pages/2358b6/" class="sidebar-link">03.canvas(绘制路径)</a></li><li><a href="/pages/335a72/" class="sidebar-link">04.canvas(绘制圆形)</a></li><li><a href="/pages/19834d/" class="sidebar-link">05.canvas(贝塞尔)</a></li><li><a href="/pages/cccb22/" class="sidebar-link">06.canvas(变换)</a></li><li><a href="/pages/450f3c/" class="sidebar-link">07.canvas(使用图片&amp;设置背景)</a></li><li><a href="/pages/4fefe4/" class="sidebar-link">08.canvas(绘制文本)</a></li><li><a href="/pages/b34b5f/" class="sidebar-link">09.canvas(像素操作)</a></li><li><a href="/pages/d62e6e/" class="sidebar-link">10.canvas(合成)</a></li><li><a href="/pages/8db399/" class="sidebar-link">11.canvas(others)</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/categories/?category=WEB%E5%89%8D%E7%AB%AF" title="分类" data-v-06225672>WEB前端</a></li><li data-v-06225672><a href="/categories/?category=Canvas%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B" title="分类" data-v-06225672>Canvas入门教程</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/QuJiaLin" target="_blank" title="作者" class="beLink" data-v-06225672>五维星空</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2022-10-19</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">01.canvas 基本用法<!----></h1>  <div class="theme-vdoing-content content__default"><h1 id="canvas-基本用法"><a href="#canvas-基本用法" class="header-anchor">#</a> canvas 基本用法</h1> <div class="language- extra-class"><pre><code>1.什么是canvas(画布)
+		&lt;canvas&gt; 是 HTML5 新增的元素，可用于通过使用JavaScript中的脚本来绘制图形
+	例如，它可以用于绘制图形，创建动画。&lt;canvas&gt; 最早由Apple引入WebKit
+	我们可以使用&lt;canvas&gt;标签来定义一个canvas元素
+		-----&gt;使用&lt;canvas&gt;标签时，建议要成对出现，不要使用闭合的形式。
+		-----&gt;canvas元素默认具有高宽
+					width：  300px
+					height：150px
+
+2.替换内容
+		&lt;canvas&gt;很容易定义一些替代内容。由于某些较老的浏览器（尤其是IE9之前的IE浏览器）
+	不支持HTML元素&quot;canvas&quot;，
+	但在这些浏览器上你应该要给用户展示些替代内容。
+	这非常简单：我们只需要在&lt;canvas&gt;标签中提供替换内容就可以。
+		---&gt;支持&lt;canvas&gt;的浏览器将会忽略在容器中包含的内容，并且只是正常渲染canvas。
+		---&gt;不支持&lt;canvas&gt;的浏览器会显示代替内容
+
+3.canvas标签的两个属性
+		&lt;canvas&gt; 看起来和 &lt;img&gt; 元素很相像，唯一的不同就是它并没有 src 和 alt 属性。
+	实际上，&lt;canvas&gt; 标签只有两个属性—— width和height。这些都是可选的。
+	当没有设置宽度和高度的时候，canvas会初始化宽度为300像素和高度为150像素。
+
+	画布的高宽
+		html属性设置width height时只影响画布本身不影画布内容
+		css属性设置width height时不但会影响画布本身的高宽，
+					还会使画布中的内容等比例缩放（缩放参照于画布默认的尺寸）
+
+4.渲染上下文
+		&lt;canvas&gt; 元素只是创造了一个固定大小的画布，要想在它上面去绘制内容，
+	我们需要找到它的渲染上下文
+		&lt;canvas&gt; 元素有一个叫做 getContext() 的方法，这个方法是用来获得渲染上下文和它的绘画功能。
+	getContext()只有一个参数，上下文的格式
+		-----&gt;获取方式
+			  var canvas = document.getElementById('box');
+			  var ctx = canvas.getContext('2d');
+
+		-----&gt;检查支持性
+			  var canvas = document.getElementById('tutorial');
+			  if (canvas.getContext){
+					var ctx = canvas.getContext('2d');
+				}
+</code></pre></div></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/QuJiaLin/Learning/edit/master/docs/WEB前端/02.Canvas入门教程/01.canvas(基本用法).md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="tags"><a href="/tags/?tag=canvas" title="标签">#canvas</a></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022/10/23, 09:21:14</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/07622f/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">axios使用</div></a> <a href="/pages/ce3910/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">02.canvas 绘制矩形</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/07622f/" class="prev">axios使用</a></span> <span class="next"><a href="/pages/ce3910/">02.canvas 绘制矩形</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/821967/"><div>
+            HTML5基础
+            <!----></div></a> <span class="date">10-19</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/8db399/"><div>
+            11.canvas(others)
+            <!----></div></a> <span class="date">10-19</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/d62e6e/"><div>
+            10.canvas(合成)
+            <!----></div></a> <span class="date">10-19</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:1754530626@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/QuJiaLin" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2022-2022
+    <span>五维星空 | Copyright © 2021-2022 5wxk.com 版权所有 增值电信业务经营许可证：<a href="http://beian.miit.gov.cn/" target="_blank">陕ICP备18001624号-3</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <div class="body-bg" style="background:url() center center / cover no-repeat;opacity:0.5;"></div> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.7a37bc80.js" defer></script><script src="/assets/js/2.fac42ad5.js" defer></script><script src="/assets/js/22.0b1a4bee.js" defer></script>
+  </body>
+</html>
